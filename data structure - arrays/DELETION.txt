@@ -1,0 +1,33 @@
+//Program for Deletion of an element
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+clrscr();
+int i,n,no,a[30];
+cout<<"\n\nEnter limit:";
+cin>>n;  //n=5
+cout<<"\n\nEnter "<<n<<" elements:";
+for(i=1;i<=n;i++)
+cin>>a[i];   //a[1]=2,a[2]=4,a[3]=5,a[4]=6,a[5]=7
+cout<<"\n\nEnter number to be deleted:";
+cin>>no;  //no=5
+for(i=1;i<=n;i++)
+{
+if(no==a[n])
+a[n]=0;
+else if(no==a[i])
+{
+while(i<n)     //(3<=5)
+{
+a[i]=a[i+1];
+i++;
+}
+}
+}
+cout<<"\n\nArray after deletion is:";
+for(i=1;i<n;i++)
+cout<<"\n\n"<<a[i];
+getch();
+}
