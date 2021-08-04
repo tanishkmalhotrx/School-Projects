@@ -1,0 +1,25 @@
+//Linear Search .. Arrays
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+clrscr();
+int a[20],i,n,no;
+cout<<"\n\nEnter limit:";
+cin>>n;
+cout<<"\n\nEnter "<<n<<" elements:";
+for(i=1;i<=n;i++)
+cin>>a[i];
+cout<<"\n\nEnter the number to be searched:";
+cin>>no;
+for(i=1;i<=n;i++)
+{
+if(no==a[i])
+{
+cout<<"\n\nNumber found";
+goto l;
+}
+}
+cout<<"\n\nNumber not found";
+l:getch();
+}
