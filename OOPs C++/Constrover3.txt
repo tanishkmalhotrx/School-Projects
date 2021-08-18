@@ -1,0 +1,26 @@
+//Program to use a Constructor
+#include<iostream.h>
+#include<conio.h>
+class example
+{
+private:int a;
+int b;
+int c;
+public:
+example()   //Default Constructor
+{ a=10;
+b=5;
+}
+void calc()
+{
+c=a+b;
+cout<<"\n\nSum is:"<<c;
+}
+}obj;
+
+void main()
+{
+clrscr();
+obj.calc();
+getch();
+}

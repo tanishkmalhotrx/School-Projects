@@ -1,0 +1,43 @@
+//Program to check whether a given number is prime, using Constructors
+#include<iostream.h>
+#include<conio.h>
+class prime
+{
+int a,k,i;
+public: prime(int x)
+{
+a=x;
+k=1;
+}
+void show();
+};
+prime::show()
+{
+for(i=2;i<=a/2;i++)
+{
+if(a%i==0)
+{
+k=0;
+break;
+}
+else
+{
+k=1;
+}
+}
+if(k==1)
+cout<<a<<" is a prime number";
+else
+cout<<a<<" is not a prime number";
+}
+
+void main()
+{
+clrscr();
+int a;
+cout<<"\n\nEnter a number:";
+cin>>a;
+prime obj(a);
+obj.show();
+getch();
+}

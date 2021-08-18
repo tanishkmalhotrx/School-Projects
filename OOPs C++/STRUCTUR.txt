@@ -1,0 +1,52 @@
+//OOP concept of Data Encapsulation, represented by Structures
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+struct student
+{
+int rno;
+int cl;
+char name[30];
+float sum;
+int m[6];
+float perc;
+}s;//global object
+void read();
+void disp();
+
+void main()
+{
+clrscr();
+read();
+clrscr();
+cout<<"\n\nStudent details are....";
+disp();
+getch();
+}
+
+void read()
+{
+s.sum=0;
+cout<<"\n\nEnter roll no:";
+cin>>s.rno;
+cout<<"\n\nEnter class:";
+cin>>s.cl;
+cout<<"\n\nEnter name of student:";
+gets(s.name);
+cout<<"\n\nEnter marks in 5 subjects:";
+for(int i=1;i<=5;i++)
+{
+cin>>s.m[i];
+s.sum=s.sum+s.m[i];
+}
+s.perc=s.sum/5;
+}
+
+void disp()
+{
+cout<<"\n\nRoll no is:"<<s.rno;
+cout<<"\n\nClass is:"<<s.cl;
+cout<<"\n\nName is:"<<s.name;
+cout<<"\n\nPercentage is:"<<s.perc<<"%";
+}
+

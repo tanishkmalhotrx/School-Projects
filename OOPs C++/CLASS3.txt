@@ -1,0 +1,65 @@
+//OOP concept of Data Abstraction, represented by Classes
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+class student
+{
+private:
+int cl;
+char name[30];
+float sum;
+int m[6];
+float perc;
+public: int rno;
+void read();
+void disp();
+}s[5];
+
+void main()
+{
+int i,rno1;
+clrscr();
+for(i=1;i<=3;i++)
+s[i].read();
+cout<<"\n\nEnter roll of student whose details you want to see:";
+cin>>rno1;
+clrscr();
+cout<<"\n\nStudent details are....";
+for(i=1;i<=3;i++)
+{
+if(s[i].rno==rno1)
+{
+s[i].disp();
+goto l;
+}
+}
+cout<<"\n\nNo such record found";
+l:getch();
+}
+
+void student::read()  //Outline function
+{
+sum=0;
+cout<<"\n\nEnter roll no:";
+cin>>rno;
+cout<<"\n\nEnter class:";
+cin>>cl;
+cout<<"\n\nEnter name of student:";
+gets(name);
+cout<<"\n\nEnter marks in 5 subjects:";
+for(int j=1;j<=5;j++)
+{
+cin>>m[j];
+sum=sum+m[j];
+}
+perc=sum/5;
+}
+
+void student::disp()
+{
+cout<<"\n\nRoll no is:"<<rno;
+cout<<"\n\nClass is:"<<cl;
+cout<<"\n\nName is:"<<name;
+cout<<"\n\nPercentage is:"<<perc<<"%";
+}
+

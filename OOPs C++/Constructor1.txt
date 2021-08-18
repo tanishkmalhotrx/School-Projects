@@ -1,0 +1,25 @@
+//Constructor written outside Class
+#include<iostream.h>
+#include<conio.h>
+class example
+{
+int a,b;
+public: example();
+void display()
+{
+cout<<"\n\nValues:"<<a<<"\t"<<b;
+}
+};
+example::example()
+{
+a=10;
+b=20;
+}
+
+void main()
+{
+clrscr();
+example obj;
+obj.display();
+getch();
+}

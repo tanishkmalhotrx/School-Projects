@@ -1,0 +1,28 @@
+//Area of circle using Class and Constructor
+#include<iostream.h>
+#include<conio.h>
+class circle
+{
+int r;
+float pi;
+float ar;
+public: circle()  //Constructor
+{
+pi=3.14;
+}
+void area()
+{
+cout<<"\n\nEnter radius:";
+cin>>r;
+ar=pi*r*r;
+cout<<"\n\nArea of circle is:"<<ar;
+}
+~circle(){}    // ~..tilde..Destructor
+}obj;
+
+void main()
+{
+clrscr();
+obj.area();
+getch();
+}

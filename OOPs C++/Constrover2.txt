@@ -1,0 +1,26 @@
+//Program using Copy Constructor
+#include<iostream.h>
+#include<conio.h>
+class ABC
+{
+private:int data;
+public: ABC() //Default Constructor
+{ }
+ABC(int value)//Parameterised Constructor
+{
+data=value;
+}
+ABC(ABC &obj) //Copy Constructor
+{
+data=obj.data;
+cout<<"\n\nCopy Constructor invoked";
+cout<<"\n\nData value is:"<<data;
+}
+};
+void main()
+{
+ABC obj1(50);
+ABC obj2;
+ABC obj3(obj1);
+obj3=obj1;
+}

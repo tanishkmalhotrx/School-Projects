@@ -1,0 +1,26 @@
+//Static members in Classes
+#include<iostream.h>
+#include<conio.h>
+class ABC
+{
+private: static int data;
+public: static  void getdata()
+{
+++data;
+cout<<"\n\nCount is:"<<data;
+}
+void putdata()
+{
+++data;
+cout<<"\n\nNow count is:"<<data;
+}
+};
+int ABC::data=5;
+void main()
+{
+clrscr();
+ABC obj; //Creating local object of class
+ABC::getdata();
+obj.putdata();
+getch();
+}
