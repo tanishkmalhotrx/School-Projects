@@ -1,0 +1,33 @@
+//Friend Function
+#include<iostream.h>
+#include<conio.h>
+class box
+{
+double width;
+public:
+double length;
+friend void printwidth(box obj);
+void setwidth(double wid);
+};
+void box::setwidth(double wid)
+{
+width=wid;
+}
+
+void printwidth(box obj)
+{
+cout<<"\n\nWidth of box:"<<box.width;
+}
+
+int main()
+{
+clrscr();
+box obj;
+obj.sedwidth(10.0);
+printwidth(obj);
+getch();
+return 0;
+}
+
+
+

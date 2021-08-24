@@ -1,0 +1,39 @@
+//Friend Class
+#include<iostream.h>
+#include<conio.h>
+class square
+{
+friend class rectangle;
+int side;
+public:
+square(int s)
+{
+side=s;
+}
+};
+class rectangle
+{
+int length;
+int breadth;
+public:
+int getarea()
+{
+return length*breadth;
+}
+void shape(square a)
+{
+length=a.side;
+breadth=a.side;
+}
+};
+
+int main()
+{
+clrscr();
+square sq(5);
+rectangle rect;
+rect.shape(sq);
+cout<<rect.getarea();
+getch();
+return 0;
+}
